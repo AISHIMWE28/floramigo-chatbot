@@ -59,6 +59,10 @@ def save_conversation_summary(user_name, plant_name, plant_problem, timestamp):
 
     print(f"\nSummary appended to {OUTPUT_FILE}")
 
+def ask_chatbot(user_input: str) -> str:
+    # Run your LLM or chatbot logic here
+    reply = run_llm(user_input)  # or whatever your function is called
+    return reply
 
 def start_chat():
     print("Welcome to Floramigo. Let's get started with a few questions.")
@@ -96,3 +100,4 @@ def start_chat():
 
 if __name__ == "__main__":
     start_chat()
+    
